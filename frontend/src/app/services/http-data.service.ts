@@ -56,7 +56,7 @@ export class HttpDataService {
   // @ts-ignore
   getItem(id): Observable<Plan> {
     return this.http
-      .get<Plan>(this.base_path + '/' + id)
+      .get<Plan>(this.base_path + '/planes/' + id)
       .pipe(
         retry(2),
         catchError(this.handleError)
